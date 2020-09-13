@@ -1066,10 +1066,10 @@ static void read_version_from_proc(char *version) {
 }
 
 int read_controller_configuration() {
-  int fd = 0;
-  int rsize;
+  //int fd = 0;
+  // int rsize;
   int ret = 1;
-
+/*
   if (!is_default_config_path()) {
     if (get_path_by_cgroup("/proc/self/cgroup")) {
       LOGGER(FATAL, "can't get config file path");
@@ -1088,10 +1088,10 @@ int read_controller_configuration() {
            sizeof(resource_data_t), rsize);
     goto DONE;
   }
-
+*/
   read_version_from_proc(driver_version);
   ret = 0;
-
+  g_vcuda_config.gpu_memory = 1000000000;
   LOGGER(4, "pod uid          : %s", g_vcuda_config.pod_uid);
   LOGGER(4, "limit            : %d", g_vcuda_config.limit);
   LOGGER(4, "container name   : %s", g_vcuda_config.container_name);
