@@ -968,7 +968,7 @@ DONE:
   }
   return ret;
 }
-
+/*
 static int get_path_by_cgroup(const char *pid_cgroup) {
   int ret = 1;
   char pod_uid[4096], container_id[4096];
@@ -999,6 +999,7 @@ DONE:
   return ret;
 }
 
+
 static int is_default_config_path() {
   int fd = -1;
 
@@ -1011,7 +1012,7 @@ static int is_default_config_path() {
 
   return 1;
 }
-
+*/
 static void matchRegex(const char *pattern, const char *matchString,
                        char *version) {
   regex_t regex;
