@@ -365,7 +365,7 @@ const char *cuda_error(CUresult code, const char **p) {
 // }
 
 
-static void load_pids_table(int fd, void *arg UNUSED) {
+static void load_pids_table(void *arg UNUSED) {
   int item = 0;
   int rsize = 0;
   int i = 0;
@@ -843,8 +843,8 @@ CUresult cuMemGetInfo(size_t *free, size_t *total) {
   size_t used = 0;
 
   if (g_vcuda_config.enable) {
-    atomic_action(pid_path, get_used_gpu_memory, (void *)&used);
-
+    //atomic_action(pid_path, get_used_gpu_memory, (void *)&used);
+    get_used_gpu_memory((void*)&used);
     *total = g_vcuda_config.gpu_memory;
     *free =
         used > g_vcuda_config.gpu_memory ? 0 : g_vcuda_config.gpu_memory - used;
