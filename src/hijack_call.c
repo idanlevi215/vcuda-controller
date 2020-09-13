@@ -385,7 +385,7 @@ static void load_pids_table(int fd, void *arg UNUSED) {
   LOGGER(8, "read %d items from %s", g_pids_table_size, pid_path);
 }
 
-static void get_used_gpu_memory(int fd, void *arg) {
+static void get_used_gpu_memory(void *arg) {
   size_t *used_memory = arg;
 
   nvmlDevice_t dev;
