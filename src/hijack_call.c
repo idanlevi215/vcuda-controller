@@ -73,7 +73,7 @@ static void atomic_action(const char *, atomic_fn_ptr, void *);
 
 static void load_pids_table(int, void *);
 
-static void get_used_gpu_memory(int, void *);
+//static void get_used_gpu_memory(int, void *);
 
 // static void get_used_gpu_utilization(int, void *);
 
