@@ -73,7 +73,7 @@ static void register_to_remote();
 
 static void load_pids_table(int, void *);
 
-//static void get_used_gpu_memory(int, void *);
+static void get_used_gpu_memory( void *);
 
 // static void get_used_gpu_utilization(int, void *);
 
@@ -364,7 +364,7 @@ const char *cuda_error(CUresult code, const char **p) {
 //   NVML_ENTRY_CALL(nvml_library_entry, nvmlShutdown);
 // }
 
-/*
+
 static void load_pids_table(int fd, void *arg UNUSED) {
   int item = 0;
   int rsize = 0;
@@ -440,7 +440,7 @@ static void get_used_gpu_memory(void *arg) {
 DONE:
   NVML_ENTRY_CALL(nvml_library_entry, nvmlShutdown);
 }
-*/
+
 // #lizard forgives
 static void register_to_remote() {
   nvmlPciInfo_t pci_info;
