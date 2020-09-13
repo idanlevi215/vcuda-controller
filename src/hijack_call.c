@@ -65,7 +65,7 @@ static int g_pids_table_size;
 /** internal function definition */
 static void register_to_remote();
 
-static void atomic_action(const char *, atomic_fn_ptr, void *);
+// static void atomic_action(const char *, atomic_fn_ptr, void *);
 
 //static void active_utilization_notifier();
 
