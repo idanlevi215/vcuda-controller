@@ -396,7 +396,7 @@ static void get_used_gpu_memory(void *arg) {
 
   unsigned int i;
 
-  load_pids_table(fd, NULL);
+  load_pids_table( NULL);
   NVML_ENTRY_CALL(nvml_library_entry, nvmlInit);
 
   ret =
